@@ -1,0 +1,24 @@
+.pizzaNav {
+  background-color: #ed6300;
+}
+
+.pizzaNav a {
+  color: white;
+}
+
+.pizzaNav .navbar-nav > li > a:hover,
+.my-navbar .navbar-nav > li > a:focus {
+  background-color: #b05800;
+}
+
+i {
+  color: white;
+}
+
+.navFonts {
+  font-size: 2em;
+}
+
+body {
+  background-color: #cccccc;
+}
