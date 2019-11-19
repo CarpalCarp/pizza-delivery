@@ -84,7 +84,24 @@
       </div>
     </nav>
 
-    <div id="root"></div>
+    <!-- In order for bootstrap 4 to work, there needs to be a wrapper div with
+         a class "container-fluid", the navbar above was the exception, it didn't
+         need a wrapper -->
+    <div class="container-fluid" id="root">
+      <main class="d-flex justify-content-center mb-3">
+        <div class="mainGUI">
+          <div>
+            <h3>Find Your Store</h3>
+            <button>Enter Delivery Address</button>
+            <h3>or</h3>
+            <button>Find carryout locations</button>
+          </div>
+          <div>
+            <p>"In pizza, we trust" <br />-Founder</p>
+          </div>
+        </div>
+      </main>
+    </div>
   </body>
 
   <!-- To allow bootstrup jQuery plugins -->
