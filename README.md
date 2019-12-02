@@ -7,4 +7,4 @@ This project is to demonstrate a good design for people who are visually impaire
 Matias Galante,
 Jack Meeks,
 Parker Mansfield,
-Joseph Dominguez,
+Joseph Dominguez
