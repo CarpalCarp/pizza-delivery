@@ -4,7 +4,7 @@ This project is to demonstrate a good design for people who are visually impaire
 
 ## Contributors
 
-Matias Galante
-Jack Meeks
-Parker Mansfield
-Joseph Dominguez
+Matias Galante,
+Jack Meeks,
+Parker Mansfield,
+Joseph Dominguez,
