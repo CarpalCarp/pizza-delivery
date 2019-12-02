@@ -92,10 +92,15 @@
         <div class="mainGUI">
             <h2>Order Pizza</h2>
             <h3>Choose size</h3>
-            <input type="radio" name="size" value="small"> Small (10")<br>
-            <input type="radio" name="size" value="medium"> Medium (12")<br>
-            <input type="radio" name="size" value="large"> Large (14")<br>
-            <input type="radio" name="size" value="xlarge"> Extra-Large (16")<br>
+            <hr>
+            <div class="d-flex flex-column align-items-start mb-3">
+              <p><input type="radio" name="size"> Small (10")</p>
+              <p><input type="radio" name="size"> Medium (12")</p>
+              <p><input type="radio" name="size"> Large (14")</p>
+              <p><input type="radio" name="size"> Jack Sized (About 5' 10", 230lb)</p>
+            </div>
+            <hr>
+
             <button onclick="window.location.href = 'saucemenu.html';">Next</button>
         </div>
             
