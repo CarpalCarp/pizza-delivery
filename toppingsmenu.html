@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <!-- Add Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="logo192.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+
+    <!-- Add custom CSS -->
+    <link rel="stylesheet" href="CSS/main.css" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <title>React App</title>
+  </head>
+
+  <!-- Code starts here -->
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+
+    <nav class="navbar navbar-expand-sm pizzaNav">
+      <a class="navbar-brand" href="index.html">
+        <img src="img/pizza.png" alt="Logo" style="width:40px;" />
+      </a>
+
+      <!-- Create menu link -->
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link navFonts" href="#">Menu</a>
+        </li>
+      </ul>
+
+      <!-- Collapsible Button for Order online link -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#collapsibleNavbar"
+      >
+        <span>
+          <i class="fa fa-bars fa-lg"></i>
+        </span>
+      </button>
+
+      <div
+        class="navbar-collapse collapse w-100 order-3 dual-collapse2"
+        id="collapsibleNavbar"
+      >
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link navFonts" href="#">Order online</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- In order for bootstrap 4 to work, there needs to be a wrapper div with
+         a class "container-fluid", the navbar above was the exception, it didn't
+         need a wrapper -->
+    <div class="container-fluid" id="root">
+      <main class="d-flex justify-content-center mb-3">
+        <div class="mainGUI">
+            <h2>Order Pizza</h2>
+            <h3>Choose Toppings</h3>
+            <div class="d-flex flex-column align-items-start mb-3">
+              <p><input type="radio"> Ham</p>
+              <p><input type="radio"> Beef</p>
+              <p><input type="radio"> Salami</p>
+              <p><input type="radio"> Pepperoni</p>
+              <p><input type="radio"> Sausage</p>
+              <p><input type="radio"> Pineapple I guess</p>
+              <p><input type="radio"> Bacon</p>
+              <p><input type="radio"> Mushroom</p>
+              <p><input type="radio"> Onions</p>
+              <p><input type="radio"> Green Peppers</p>
+            </div>            
+            <button onclick="window.location.href = 'saucemenu.html';">previous</button>
+            <button onclick="window.location.href = 'Menu.html';">Next</button>
+        </div>
+            
+      </main>
+    </div>
+  </body>
+
+  <!-- To allow bootstrup jQuery plugins -->
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"
+  ></script>
+</html>
