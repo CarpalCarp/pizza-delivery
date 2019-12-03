@@ -71,3 +71,16 @@ body {
   box-sizing: border-box;
 }
 
+/* mobile */
+@media screen and (max-width: 768px) {
+  .mainGUI {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .mainGUI button {
+    font-size: 14px;
+    padding: 5px 12px;
+  }
+}
+
