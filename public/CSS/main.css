@@ -60,8 +60,8 @@ body {
   font-size: 20px;
 }
 
-
-.mainGUI input[type=text], select {
+.mainGUI input[type="text"],
+select {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -69,6 +69,29 @@ body {
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
+}
+
+.HelveticaFont {
+  font-family: Helvetica;
+}
+
+.CursiveFont {
+  font-family: cursive;
+}
+
+.ArialBold {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: bolder;
+}
+
+.MonospaceBold {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bolder;
+}
+
+.ImpactBold {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
 
 /* mobile */
@@ -83,4 +106,3 @@ body {
     padding: 5px 12px;
   }
 }
-

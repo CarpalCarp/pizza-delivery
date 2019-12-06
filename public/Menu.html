@@ -19,11 +19,13 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
 
+    <script src="JS/ChangeFont.js"></script>
+
     <title>Pizza Delivery</title>
   </head>
 
   <!-- Code starts here -->
-  <body>
+  <body id="wholeBody">
     <noscript>You need to enable JavaScript to run this app.</noscript>
 
     <nav class="navbar navbar-expand-sm pizzaNav">
@@ -68,17 +70,56 @@
     <div class="container-fluid" id="root">
       <main class="d-flex justify-content-center mb-3">
         <div class="mainGUI">
-            <h2>Menu</h2>
-            <button onclick="window.location.href = 'pizzamenu.html';">Order Pizza</button><br>
-            <button onclick="window.location.href = 'drinksmenu.html';">Order Drinks</button><br>
-            <button onclick="window.location.href = 'sidemenu.html';">Order Sides</button><br>
-            <button onclick="window.location.href = 'checkout.html';">Checkout</button><br>
-            <hr>
-            <h3>Cart</h3>
-            <textarea readonly rows="6" cols="38">
+          <h2>Menu</h2>
+          <button
+            name="redirectBtn"
+            onclick="window.location.href = 'pizzamenu.html' + '?' + document.getElementById('selector').value"
+            ;
+          >
+            Order Pizza</button
+          ><br />
+          <button
+            name="redirectBtn"
+            onclick="window.location.href = 'drinksmenu.html' + '?' + document.getElementById('selector').value"
+            ;
+          >
+            Order Drinks</button
+          ><br />
+          <button
+            name="redirectBtn"
+            onclick="window.location.href = 'sidemenu.html' + '?' + document.getElementById('selector').value"
+            ;
+          >
+            Order Sides</button
+          ><br />
+          <button
+            name="redirectBtn"
+            onclick="window.location.href = 'checkout.html' + '?' + document.getElementById('selector').value"
+            ;
+          >
+            Checkout</button
+          ><br />
+          <hr />
+          <h3>Cart</h3>
+          <textarea readonly rows="6" cols="38">
             - Large (14") Pizza, pepperoni
             - 2L Diet Dr. Kelp
-            </textarea>
+            </textarea
+          >
+        </div>
+      </main>
+      <main class="d-flex justify-content-center">
+        <div class="mainGUI">
+          <label>Change Font</label>
+          <select id="selector" onclick="changeFont();">
+            <option class="HelveticaFont" value="helvetica">Helvetica</option>
+            <option class="CursiveFont" value="cursive">Cursive</option>
+            <option class="ArialBold" value="arialbold">Arial Bold</option>
+            <option class="MonospaceBold" value="monospace"
+              >Monospace Bold</option
+            >
+            <option class="ImpactBold" value="impact">Impact Bold</option>
+          </select>
         </div>
       </main>
     </div>

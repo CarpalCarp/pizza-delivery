@@ -19,11 +19,13 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
 
+    <script src="JS/ChangeFont.js"></script>
+
     <title>Pizza Delivery</title>
   </head>
 
   <!-- Code starts here -->
-  <body>
+  <body id="wholeBody">
     <noscript>You need to enable JavaScript to run this app.</noscript>
 
     <nav class="navbar navbar-expand-sm pizzaNav">
@@ -68,18 +70,44 @@
     <div class="container-fluid" id="root">
       <main class="d-flex justify-content-center mb-3">
         <div class="mainGUI">
-            <h2>Order Pizza</h2>
-            <h3>Choose Sauce</h3>
-            <hr>
-            <div class="d-flex flex-column align-items-start mb-3">
-              <p><input type="radio"> Tomato Sauce</p>
-              <p><input type="radio"> BBQ Sauce</p>
-              <p><input type="radio"> Alfredo Sauce</p>
-              <p><input type="radio"> The blood of your enemies</p>
-            </div>
-            <hr>
-            <button onclick="window.location.href = 'pizzamenu.html';">previous</button>
-            <button onclick="window.location.href = 'toppingsmenu.html';">Next</button>
+          <h2>Order Pizza</h2>
+          <h3>Choose Sauce</h3>
+          <hr />
+          <div class="d-flex flex-column align-items-start mb-3">
+            <p><input type="radio" /> Tomato Sauce</p>
+            <p><input type="radio" /> BBQ Sauce</p>
+            <p><input type="radio" /> Alfredo Sauce</p>
+            <p><input type="radio" /> The blood of your enemies</p>
+          </div>
+          <hr />
+          <button
+            name="redirectBtn"
+            onclick="window.location.href = 'pizzamenu.html'  + '?' + document.getElementById('selector').value"
+            ;
+          >
+            previous
+          </button>
+          <button
+            name="redirectBtn"
+            onclick="window.location.href = 'toppingsmenu.html'  + '?' + document.getElementById('selector').value"
+            ;
+          >
+            Next
+          </button>
+        </div>
+      </main>
+      <main class="d-flex justify-content-center">
+        <div class="mainGUI">
+          <label>Change Font</label>
+          <select id="selector" onclick="changeFont();">
+            <option class="HelveticaFont" value="helvetica">Helvetica</option>
+            <option class="CursiveFont" value="cursive">Cursive</option>
+            <option class="ArialBold" value="arialbold">Arial Bold</option>
+            <option class="MonospaceBold" value="monospace"
+              >Monospace Bold</option
+            >
+            <option class="ImpactBold" value="impact">Impact Bold</option>
+          </select>
         </div>
       </main>
     </div>

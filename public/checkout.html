@@ -19,11 +19,13 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
 
+    <script src="JS/ChangeFont.js"></script>
+
     <title>Pizza Delivery</title>
   </head>
 
   <!-- Code starts here -->
-  <body>
+  <body id="wholeBody">
     <noscript>You need to enable JavaScript to run this app.</noscript>
 
     <nav class="navbar navbar-expand-sm pizzaNav">
@@ -68,16 +70,36 @@
     <div class="container-fluid" id="root">
       <main class="d-flex justify-content-center mb-3">
         <div class="mainGUI">
-            <h2>Checkout</h2>
-            <h3>Review your order</h3>
-            <textarea readonly rows="6" cols="50">
+          <h2>Checkout</h2>
+          <h3>Review your order</h3>
+          <textarea readonly rows="6" cols="50">
                     - Large (14") Pizza, pepperoni
                     - Diet Dr. Kelp
                     - Some more garbage you ordered
-            </textarea><br>
-            <button onclick="window.location.href = 'index.html';">Confirm order</button>
+            </textarea
+          ><br />
+          <button
+            name="redirectBtn"
+            onclick="window.location.href = 'index.html'  + '?' + document.getElementById('selector').value"
+            ;
+          >
+            Confirm order
+          </button>
         </div>
-            
+      </main>
+      <main class="d-flex justify-content-center">
+        <div class="mainGUI">
+          <label>Change Font</label>
+          <select id="selector" onclick="changeFont();">
+            <option class="HelveticaFont" value="helvetica">Helvetica</option>
+            <option class="CursiveFont" value="cursive">Cursive</option>
+            <option class="ArialBold" value="arialbold">Arial Bold</option>
+            <option class="MonospaceBold" value="monospace"
+              >Monospace Bold</option
+            >
+            <option class="ImpactBold" value="impact">Impact Bold</option>
+          </select>
+        </div>
       </main>
     </div>
   </body>

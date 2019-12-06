@@ -19,11 +19,13 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
 
+    <script src="JS/ChangeFont.js"></script>
+
     <title>Pizza Delivery</title>
   </head>
 
   <!-- Code starts here -->
-  <body>
+  <body id="wholeBody">
     <noscript>You need to enable JavaScript to run this app.</noscript>
 
     <nav class="navbar navbar-expand-sm pizzaNav">
@@ -68,13 +70,43 @@
     <div class="container-fluid" id="root">
       <main class="d-flex justify-content-center mb-3">
         <div class="mainGUI">
-            <h2>Locations</h2>
-            <p>Here are the nearest stores to your zip code.</p><hr>
-            <p style='float: left'>Address: 123 Fake Street</p><br><br>
-            <p style='float: left'>Hours: 10:00AM - 10:00PM</p><br>
-            <img src="map-vector-11.jpg" alt="This is a picture of a map"><hr>
-            <button onclick="window.location.href = 'Menu.html';">Order carryout</button><br>
-            <button onclick="window.location.href = 'Menu.html';">Order delivery</button>
+          <h2>Locations</h2>
+          <p>Here are the nearest stores to your zip code.</p>
+          <hr />
+          <p style="float: left">Address: 123 Fake Street</p>
+          <br /><br />
+          <p style="float: left">Hours: 10:00AM - 10:00PM</p>
+          <br />
+          <img src="map-vector-11.jpg" alt="This is a picture of a map" />
+          <hr />
+          <button
+            name="redirectBtn"
+            onclick="window.location.href = 'Menu.html' + '?' + document.getElementById('selector').value"
+            ;
+          >
+            Order carryout</button
+          ><br />
+          <button
+            name="redirectBtn"
+            onclick="window.location.href = 'Menu.html' +  '?' + document.getElementById('selector').value"
+            ;
+          >
+            Order delivery
+          </button>
+        </div>
+      </main>
+      <main class="d-flex justify-content-center">
+        <div class="mainGUI">
+          <label>Change Font</label>
+          <select id="selector" onchange="changeFont();">
+            <option class="HelveticaFont" value="helvetica">Helvetica</option>
+            <option class="CursiveFont" value="cursive">Cursive</option>
+            <option class="ArialBold" value="arialbold">Arial Bold</option>
+            <option class="MonospaceBold" value="monospace"
+              >Monospace Bold</option
+            >
+            <option class="ImpactBold" value="impact">Impact Bold</option>
+          </select>
         </div>
       </main>
     </div>

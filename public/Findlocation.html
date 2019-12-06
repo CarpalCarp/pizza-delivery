@@ -19,11 +19,13 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
 
+    <script src="JS/ChangeFont.js"></script>
+
     <title>Pizza Delivery</title>
   </head>
 
   <!-- Code starts here -->
-  <body>
+  <body id="wholeBody">
     <noscript>You need to enable JavaScript to run this app.</noscript>
 
     <nav class="navbar navbar-expand-sm pizzaNav">
@@ -68,14 +70,40 @@
     <div class="container-fluid" id="root">
       <main class="d-flex justify-content-center mb-3">
         <div class="mainGUI">
-            <h2>Find Your Store</h2>
-            <h3>Find carryout location</h3>
-            <form>
-                <input type="text" name="address" placeholder="Zip"> 
-            </form>
-            <button onclick="window.location.href = 'Map.html';">Find Your Store</button>
-            <h3>OR</h3>
-            <button onclick="window.location.href = 'Enteraddress.html';">Enter delivery address</button>
+          <h2>Find Your Store</h2>
+          <h3>Find carryout location</h3>
+          <form>
+            <input type="text" name="address" placeholder="Zip" />
+          </form>
+          <button
+            name="redirectBtn"
+            onclick="window.location.href = 'Map.html' + '?' + document.getElementById('selector').value"
+            ;
+          >
+            Find Your Store
+          </button>
+          <h3>OR</h3>
+          <button
+            name="redirectBtn"
+            onclick="window.location.href = 'Enteraddress.html' + '?' + document.getElementById('selector').value"
+            ;
+          >
+            Enter delivery address
+          </button>
+        </div>
+      </main>
+      <main class="d-flex justify-content-center">
+        <div class="mainGUI">
+          <label>Change Font</label>
+          <select id="selector" onchange="changeFont();">
+            <option class="HelveticaFont" value="helvetica">Helvetica</option>
+            <option class="CursiveFont" value="cursive">Cursive</option>
+            <option class="ArialBold" value="arialbold">Arial Bold</option>
+            <option class="MonospaceBold" value="monospace"
+              >Monospace Bold</option
+            >
+            <option class="ImpactBold" value="impact">Impact Bold</option>
+          </select>
         </div>
       </main>
     </div>

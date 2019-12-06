@@ -20,11 +20,13 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
 
+    <script src="JS/ChangeFont.js"></script>
+
     <title>Pizza Delivery</title>
   </head>
 
   <!-- Code starts here -->
-  <body>
+  <body id="wholeBody">
     <noscript>You need to enable JavaScript to run this app.</noscript>
 
     <nav class="navbar navbar-expand-sm pizzaNav">
@@ -71,13 +73,39 @@
         <div class="mainGUI">
           <div>
             <h3>Find Your Store</h3>
-            <button onclick="window.location.href = 'Enteraddress.html';">Enter Delivery Address</button>
+            <button
+              name="redirectBtn"
+              onclick="window.location.href = 'Enteraddress.html' + '?' + document.getElementById('selector').value"
+              ;
+            >
+              Enter Delivery Address
+            </button>
             <h3>or</h3>
-            <button onclick="window.location.href = 'Findlocation.html';">Find carryout locations</button>
+            <button
+              name="redirectBtn"
+              onclick="window.location.href = 'Findlocation.html' + '?' + document.getElementById('selector').value"
+              ;
+            >
+              Find carryout locations
+            </button>
           </div>
           <div>
             <p>"In pizza, we trust" <br />-Founder</p>
           </div>
+        </div>
+      </main>
+      <main class="d-flex justify-content-center">
+        <div class="mainGUI">
+          <label>Change Font</label>
+          <select id="selector" onclick="changeFont();">
+            <option class="HelveticaFont" value="helvetica">Helvetica</option>
+            <option class="CursiveFont" value="cursive">Cursive</option>
+            <option class="ArialBold" value="arialbold">Arial Bold</option>
+            <option class="MonospaceBold" value="monospace"
+              >Monospace Bold</option
+            >
+            <option class="ImpactBold" value="impact">Impact Bold</option>
+          </select>
         </div>
       </main>
     </div>
