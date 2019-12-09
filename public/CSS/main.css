@@ -94,6 +94,10 @@ select {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
 
+section{
+  margin-bottom: 20px;
+}
+
 /* mobile */
 @media screen and (max-width: 768px) {
   .mainGUI {
