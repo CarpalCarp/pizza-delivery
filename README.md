@@ -11,3 +11,7 @@ Joseph Dominguez
 
 ## Project link
 https://git.io/JtoDo
+
+Screenshots of the web page:
+![GitHub Logo](/Home-Page.PNG)
+![GitHub Logo](/Menu.PNG)
